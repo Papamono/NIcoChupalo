@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-Cl">
+  <head>
+    <meta charset="utf-8">
+    <title>MODIFICAR A {{mascota.nombre_mascota}}</title>
+  </head>
+
+  <body>
+
+    <form action="modificarRegistro/" method="post">
+      {% csrf_token %}
+
+      <div>
+        <input type="number" name="modificarIdMascota" value="{{mascota.id}}" hidden>
+      </div>
+
+      <div>
+        <label for="text">CAMBIAR FOTOGRAFIA DE LA MASCOTA:</label>
+        <input type="file" name="modificarFotografia" value="{{mascota.fotografia}}" required>
+      </div>
+
+      <div>
+        <label for="text">CAMBIAR NOMBRE DE LA MASCOTA:</label>
+        <input type="text" name= "modificarNombreMascota" value = "{{mascota.nombre_mascota}}" required>
+      </div>
+
+      <div>
+        <label for="text">CAMBIAR RAZA PREDOMINANTE:</label>
+        <input type="text" name= "modificarRazaPredominante" value = "{{mascota.raza_predominante}}" required>
+      </div>
+
+      <div>
+        <label for="text">CAMBIAR DESCRIPCION:</label>
+        <textarea name="modificarDescripcion" rows="8" cols="80">{{mascota.descripcion}}</textarea>
+      </div>
+
+      <div>
+        <label for="text">CAMBIAR ESTADO ACTUAL:</label>
+        <select name="modifcarEstado" name="estado" value = "{{mascota.estado}}" required>
+          <option value="RESCATADO">RESCATADO</option>
+          <option value="DISPONIBLE">DISPONIBLE</option>
+          <option value="ADOPTADO">ADOPTADO</option>
+        </select>
+      </div>
+
+      <div>
+        <input type="submit" value="Modificar registro">
+      </div>
+
+    </form>
+
+    <form action="eliminarRegistro/" method="post">
+      {% csrf_token %}
+
+      <div>
+        <input type="text" name="eliminarIdMascota" value="{{mascota.id}}" hidden>
+        <input type="submit" value="Eliminar registro">
+      </div>
+
+    </form>
+
+  </body>
+</html>

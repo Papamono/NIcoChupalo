@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-Cl">
+
+  <head>
+    <meta charset="utf-8">
+    <title>LISTAR</title>
+  </head>
+
+  <body>
+      <h1>LISTA DE REGISTRO DE MASCOTAS</h1>
+
+      <ul>
+
+        {% for elemento in Listado_registro %}
+        {{elemento.id}}
+        <br>
+        {{elemento.fotografia}}
+        <br>
+        <label for="text">NOMBRE DE LA MASCOTA:</label>
+        {{elemento.nombre_mascota}}
+        <br>
+        <label for="text">RAZA PREDOMINANTE:</label>
+        {{elemento.raza_predominante}}
+        <br>
+        <label for="text">DESCRIPCION:</label>
+        {{elemento.descripcion}}
+        <br>
+        <label for="text">ESTADO:</label>
+        {{elemento.estado}}
+        <br>
+        <br>
+        {% endfor %}
+
+      </ul>
+
+  </body>
+
+</html>

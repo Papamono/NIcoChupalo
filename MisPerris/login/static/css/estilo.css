@@ -1,0 +1,258 @@
+body{
+    margin: 0%;
+}
+.esp{
+    width: 200px;
+}
+.titulo{
+    background:#56c596;
+    padding: 10px;
+}
+
+.imgs2{
+    max-height: 100%;
+    min-height: 300px;
+    min-width: 100%;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    display: inline;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family: cursive;
+    padding: 10px;
+    font:bold;
+    padding-top: 20px;
+}
+
+.inicioss{
+    background: #3dba98;
+}
+
+.registross{
+    display: inline;
+    float: left;
+}
+
+.ingresarr {
+    width: 100px;
+}
+
+.registrarsee {
+    width: 120px;
+}
+
+.registroo{
+    width: 150px;
+}
+
+@media ( max-width:400px){
+    .menu li a {
+       padding: 50px;
+    }
+}
+
+/*esta es la parte oscurita de la pagina */
+
+.medio{
+    background-color: #3dba98;
+    height: 30%;
+}
+
+.bajo div {
+    display: inline-block; 
+}
+
+.espacio{
+    padding-right: 230px;
+    font-size: 1px
+}
+
+.espacio2{
+    padding-right: 200px;
+    font-size: 1px;
+}
+.lema {
+    padding-left: 20px;
+    color: white;
+    font-family: cursive;
+    font-size: 20px; 
+    text-align: center;
+}
+
+.num{
+    padding-left: 50px;
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.imgs {
+    padding-top: 10px;
+}
+
+.imgs li {
+    
+    list-style: none;
+    display: inline;
+}
+
+.imgs li a i {
+    color: gray;
+    height: 50px;
+}
+
+/* esta es la parte izquierda de la parte baja del verdesito*/
+
+.bloque{
+    float: right;
+}
+
+.bloque .lemita {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font: bold;
+}
+
+.bloque .peque{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    padding-left: 12px;
+}
+
+.bloque .putos{
+    font:bold;
+    padding-left: 35px;
+}
+
+.resumen .intro { 
+    float: right;
+    padding-left: 9px;
+    line-height: 1.9;
+    margin: 0 0 30px 0;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+.rescate img {
+    float: right;
+    width: 50%;
+}
+
+.sub1 {
+    width: 50px;
+}
+
+/* esta es la parte derecha de la parte baja del verdesito*/
+
+.dere{
+    float: right;
+}
+
+.der{
+    float: left;
+}
+
+.der img{
+    float: left;
+    width: 50%;
+}
+
+.inglish .negr{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font: bold;
+}
+
+.inglish .fin{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    margin: 0 0 30px 0;
+}
+.sub2{
+    width: 50px;
+    float: left;
+    margin: 0 0 30px 0;
+}
+.sigue p {
+    float: left;
+    text-align: left;
+    padding-left: 9px;
+    line-height: 1.9;
+    margin: 0 0 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+
+button {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: inherit;
+    background: transparent;
+    border: 2px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+  
+button:hover {
+    background-color: #56c596;
+    border-color: #56c596;
+    color: #FFF;
+}
+
+.perriss{
+    background:  #3dba98;
+} 
+
+.card{
+    display: inline;
+}
+
+.bigotes {
+    width: 20%;
+    height: 30%;
+    padding-top: 20px;
+}
+
+
+.chocolate {
+    width: 20%;
+    height: 30%;
+    padding-top: 20px;
+}
+
+
+.luna {
+    width: 20%;
+    padding-top: 20px;
+}
+
+
+.maya {
+    width: 20%;
+    padding-top: 20px;
+}
+
+.form{
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    
+}
