@@ -3,35 +3,71 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css" >
+    <link rel="stylesheet" href="../static/css/flexboxgrid.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
     <title>LISTAR</title>
   </head>
 
   <body>
-      <h1>LISTA DE REGISTRO DE MASCOTAS</h1>
+    <div class="container-fluid titulo">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <img src="../static/img/logo.png" height="50px">
+        </div>
+        <nav class="col-xs-12 col-sm-6 col-md-8">
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contactenos</a></li>
+          </ul>
+        </nav>
+      </div>    
+    </div>
+    <ul>
 
-      <ul>
+      {% for elemento in Listado_registro %}
+      {{elemento.id}}
+      <br>
+      {{elemento.fotografia}}
+      <br>
+      <label for="text">NOMBRE DE LA MASCOTA:</label>
+      {{elemento.nombre_mascota}}
+      <br>
+      <label for="text">RAZA PREDOMINANTE:</label>
+      {{elemento.raza_predominante}}
+      <br>
+      <label for="text">DESCRIPCION:</label>
+      {{elemento.descripcion}}
+      <br>
+      <label for="text">ESTADO:</label>
+      {{elemento.estado}}
+      <br>
+      <br>
+      {% endfor %}
+    </ul>
 
-        {% for elemento in Listado_registro %}
-        {{elemento.id}}
-        <br>
-        {{elemento.fotografia}}
-        <br>
-        <label for="text">NOMBRE DE LA MASCOTA:</label>
-        {{elemento.nombre_mascota}}
-        <br>
-        <label for="text">RAZA PREDOMINANTE:</label>
-        {{elemento.raza_predominante}}
-        <br>
-        <label for="text">DESCRIPCION:</label>
-        {{elemento.descripcion}}
-        <br>
-        <label for="text">ESTADO:</label>
-        {{elemento.estado}}
-        <br>
-        <br>
-        {% endfor %}
-
-      </ul>
+    <div class="container-fluid perriss" style="margin :0%;">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 style="color:white; font-family: Arial, Helvetica, sans-serif">LISTA DE REGISTRO DE MASCOTAS</h1>
+          <div>
+            <div class="card">
+              <img class="card-img-top" src="#" alt="Card image cap">  <!--IMAGEN-->
+              <div class="card-body">
+                <h5 class="card-title"></h5>   <!--NOMBRE-->
+                <p class="card-text"></p>  <!--DESCRIPCION-->
+                <button type="button" class="btn btn-primary">MODIFICAR</button> 
+                <button type="button" class="btn btn-primary">ELIMINAR</button> 
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>                    
 
   </body>
 
