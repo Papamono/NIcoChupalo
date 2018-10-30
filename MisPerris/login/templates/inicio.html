@@ -27,29 +27,13 @@
           </nav>
         </div>    
         <div class="row">
-          <div >
-            <div class="form-inline">
+          <div class="iniciosss">
+            <div class="form-inline ">
               <div class="ingresarr">
                 <form action="login/" method="post">
                   {% csrf_token %}
                     <div>
                       <input class="btn btn-primary" type="submit" value="Ingresar">
-                    </div>
-                </form>
-              </div>
-              <div class="registrarsee">
-                <form action="signup/" method="post">
-                  {% csrf_token %}
-                    <div>
-                      <input class="btn btn-primary" type="submit" value="Registrarse">
-                    </div>
-                </form>
-              </div>
-              <div class="registroo">
-                <form action="registro/" method="post">
-                  {% csrf_token %}
-                    <div>
-                      <input class="btn btn-primary" type="submit" value="Registro mascota">
                     </div>
                 </form>
               </div>
@@ -60,16 +44,7 @@
                       <input class="btn btn-primary" type="submit" value="Listar">
                     </div>
                 </form>
-              </div>
-              <div class="buscarr">
-                <form action="modificar/" method="post">
-                  {% csrf_token %}
-                    <div>
-                      <input type = "number" name = "idMascota" placeholder="ID Mascota" required>
-                      <input class="btn btn-primary" type = "submit" value = "Buscar mascota">
-                    </div>
-                </form>
-              </div>
+              </div>>
             </div>
           </div> 
         </div>
