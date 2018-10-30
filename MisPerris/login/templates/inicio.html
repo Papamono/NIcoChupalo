@@ -240,6 +240,67 @@
       </div>
   </div>
 
+  <!--FORMULARIO-->
+  <div class="container-fluid form ">
+    <div class="row">
+      <div class="col-md-12">
+        <form action="test.html" method="POST" id="formulario">
+          <h1 style="font-family: Arial, Helvetica, sans-serif; text-align: unset">Formulario de adopcion</h1>
+            <div class="form-group">
+              <label for="text">CORREO:</label>
+                <input type="email" class="form-control" placeholder="Ingrese su correo aqui" id="correo" required>
+            </div>
+            <div class="form-group">
+              <label for="text">NOMBRE:</label>
+              <input type="text" class="form-control" placeholder="Ingrese su nombre aqui" id="nombre" pattern="[A-Za-z ]+" title="Error ingrese un nombre valido, este debe estar compuesto unicamente por letras." required>
+            </div>
+            <div class="form-group">
+              <label for="text">TELEFONO:</label>
+              <input type="text" class="form-control" placeholder="Ingrese su telefono aqui" id="telefono" title="Error ingrese un numero valido, este debe ser de 9 digitos." pattern="[0-9]{9}" required>
+            </div>
+            <div class="form-group">
+              <label for="text">FECHA DE NACIMIENTO:</label>
+              <input type="date" class="form-control" placeholder="Ingrese su fecha de nacimiento aqui" id="fechaNacimiento" max="2000-12-31" required>
+            </div>            
+            <div class="form-group">
+              <label for="text">RUN:</label>
+              <input type="text" class="form-control" placeholder="Ingrese su run aqui" id="run"  pattern="[0-9]{7,8}" title="Error ingrese un run valido, este debe ser de 7 u 8 digitos." required>
+              <label for="text">DV:</label>
+              <input type="text" class="form-control" placeholder="Ingrese su dv aqui" id="run"  pattern="[0-9Kk]{1}" title="Error ingrese un dv valido, este debe ser un digito o {k,K}." required>
+            </div>
+            <div class="form-group">
+              <label for="text">REGION:</label>
+              <select class="form-control" name="region" id="region" required>
+                <option hidden>seleccione una region</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="text">CIUDAD:</label>
+              <select class="form-control" name="ciudad" id="ciudad" required>
+                <option hidden>seleccione una ciudad</option>
+              </select>
+            </div>             
+            <div class="form-group">
+              <label for="text">VIVIENDA:</label>
+              <select class="form-control" name="vivienda" id="vivienda" required>
+                <option hidden>Seleccione su tipo de vivienda </option>
+                <option value="casa con patio grande">casa con patio grande</option>
+                <option value="casa con patio pequeño">casa con patio pequeño</option>
+                <option value="casa sin patio">casa sin patio</option>
+                <option value="depatamento">departamento</option>
+              </select>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-success">Enviar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+      
+  
+  
+
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/jquery.validate.js"></script>
