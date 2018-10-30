@@ -19,6 +19,9 @@ body{
     list-style: none;
 }
 
+.listarr {
+    width: 220px;
+}
 .menu li{
     display: inline;
 }
@@ -43,15 +46,15 @@ body{
 }
 
 .ingresarr {
-    width: 100px;
+    width: 200px;
 }
 
 .registrarsee {
-    width: 120px;
+    width: 200px;
 }
 
 .registroo{
-    width: 150px;
+    width: 250px;
 }
 
 @media ( max-width:400px){
@@ -122,6 +125,7 @@ body{
 
 .bloque{
     float: right;
+
 }
 
 .bloque .lemita {
@@ -140,6 +144,10 @@ body{
 .bloque .putos{
     font:bold;
     padding-left: 35px;
+}
+
+.registrooss{
+    margin: 0 auto 0 auto;
 }
 
 .resumen .intro { 
@@ -263,4 +271,17 @@ button:hover {
     padding-left: 30%;
     padding-right: 30%;
     
+}
+
+footer{
+    background-color: #56c596;
+    text-align: center;
+    color:blue;
+    margin: 0;
+}
+
+.registrooss{
+    width: 800px;
+    background-color:  #56c596;
+    color: white;
 }

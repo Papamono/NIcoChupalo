@@ -2,62 +2,85 @@
 <html lang="es-Cl">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css" >
+    <link rel="stylesheet" href="../static/css/flexboxgrid.css" type="text/css">
+
+    <link rel="stylesheet" href="../static/css/estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    
     <title>MODIFICAR A {{mascota.nombre_mascota}}</title>
   </head>
 
-  <body>
+  <body style="background-color:#3dba98;">
+    <div class="container-fluid titulo">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="../static/img/logo.png" height="50px">
+        </div>
+        <nav class="col-xs-12 col-sm-6 col-md-8">
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contactenos</a></li>
+          </ul>
+        </nav>
+      </div>    
+    </div>
 
-    <form action="modificarRegistro/" method="post">
-      {% csrf_token %}
+    <div class=" container-fluid rounded registrooss">
+      <form action="modificarRegistro/" class="form-signin" method="post">
+        {% csrf_token %}
+        <h2>Modificar Mascota</h2>
+        <div>
+          <input type="number" name="modificarIdMascota"  value="{{mascota.id}}" hidden>
+        </div>
+        <div>
+          <label for="text" style="font-size: 25px;">CAMBIAR FOTOGRAFIA DE LA MASCOTA:</label>
+          <input type="file" name="modificarFotografia"  value="{{mascota.fotografia}}" required>
+        </div>   
+        <div>
+          <label for="text" style="font-size: 25px;">CAMBIAR NOMBRE DE LA MASCOTA:</label>
+          <input type="text"  name= "modificarNombreMascota" class="form-control" style="width:400px;" value = "{{mascota.nombre_mascota}}" required>
+        </div>  
+        <div>
+          <label for="text" style="font-size: 25px;">CAMBIAR RAZA PREDOMINANTE:</label>
+          <input type="text" name= "modificarRazaPredominante" class="form-control" style="width:400px;" value = "{{mascota.raza_predominante}}" required>
+        </div>    
+        <div>
+          <label for="text" style="font-size: 25px;">CAMBIAR DESCRIPCION:</label>
+          <textarea name="modificarDescripcion" rows="8" class="form-control" style="width:400px;" cols="80">{{mascota.descripcion}}</textarea>
+        </div>  
+        <div>
+          <label for="text" style="font-size: 25px;">CAMBIAR ESTADO ACTUAL:</label>
+          <select name="modifcarEstado" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown" name="estado" value = "{{mascota.estado}}" required>
+            <option value="RESCATADO">RESCATADO</option>
+            <option value="DISPONIBLE">DISPONIBLE</option>
+            <option value="ADOPTADO">ADOPTADO</option>
+          </select>
+        </div>
+        <div style=" padding-top: 40px;">
+          <input type="submit" class="btn btn-primary" style="font-size: 25px;" value="Modificar registro">
+        </div>
+      </form>
+      <form action="eliminarRegistro/" method="post">
+        {% csrf_token %}
+        <div style=" padding-top: 30px;">
+          <input type="text" name="eliminarIdMascota" value="{{mascota.id}}" hidden>
+          <input type="submit" class="btn btn-primary" style="font-size: 25px;" value="Eliminar registro">
+        </div>  
+      </form>
+    </div>
 
-      <div>
-        <input type="number" name="modificarIdMascota" value="{{mascota.id}}" hidden>
-      </div>
+    <div>
 
-      <div>
-        <label for="text">CAMBIAR FOTOGRAFIA DE LA MASCOTA:</label>
-        <input type="file" name="modificarFotografia" value="{{mascota.fotografia}}" required>
-      </div>
 
-      <div>
-        <label for="text">CAMBIAR NOMBRE DE LA MASCOTA:</label>
-        <input type="text" name= "modificarNombreMascota" value = "{{mascota.nombre_mascota}}" required>
-      </div>
-
-      <div>
-        <label for="text">CAMBIAR RAZA PREDOMINANTE:</label>
-        <input type="text" name= "modificarRazaPredominante" value = "{{mascota.raza_predominante}}" required>
-      </div>
-
-      <div>
-        <label for="text">CAMBIAR DESCRIPCION:</label>
-        <textarea name="modificarDescripcion" rows="8" cols="80">{{mascota.descripcion}}</textarea>
-      </div>
-
-      <div>
-        <label for="text">CAMBIAR ESTADO ACTUAL:</label>
-        <select name="modifcarEstado" name="estado" value = "{{mascota.estado}}" required>
-          <option value="RESCATADO">RESCATADO</option>
-          <option value="DISPONIBLE">DISPONIBLE</option>
-          <option value="ADOPTADO">ADOPTADO</option>
-        </select>
-      </div>
-
-      <div>
-        <input type="submit" value="Modificar registro">
-      </div>
-
-    </form>
-
-    <form action="eliminarRegistro/" method="post">
-      {% csrf_token %}
-
-      <div>
-        <input type="text" name="eliminarIdMascota" value="{{mascota.id}}" hidden>
-        <input type="submit" value="Eliminar registro">
-      </div>
-
-    </form>
-
+  
   </body>
+
+  <div style=" padding-top: 40px;">
+    <footer > Mobile and web design - MIS PERRIS
+      <p> Free material for everyone </p>
+    </footer>
+  </div>
+
 </html>

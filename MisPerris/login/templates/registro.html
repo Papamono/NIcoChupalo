@@ -4,47 +4,69 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../static/css/bootstrap.css" type="text/css" >
     <link rel="stylesheet" href="../static/css/flexboxgrid.css" type="text/css">
-    <link href="https://getbootstrap.com/docs/4.1/examples/sign-in/signin.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/estilo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">  
     <title>REGISTRO</title>
   </head>
-  <body>
-    <form action="crearRegistro/" method="post">
-      {% csrf_token %}
-      <div>
-        <label for="text">FOTOGRAFIA DE LA MASCOTA:</label>
-        <input type="file" name="fotografia" required>
-      </div>
+  <body style="background-color:#3dba98;">
+    <div class="container-fluid titulo">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <img src="../static/img/logo.png" height="50px">
+        </div>
+        <nav class="col-xs-12 col-sm-6 col-md-8">
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contactenos</a></li>
+          </ul>
+        </nav>
+      </div>    
+    </div>
+    <div class=" container-fluid rounded registrooss">
+      <form action="crearRegistro/" class="form-signin" method="post">
+        {% csrf_token %}
+          <div>
+            <label for="text">FOTOGRAFIA DE LA MASCOTA:</label>
+            <input type="file" name="fotografia" required>
+          </div>
+    
+          <div>
+            <label for="text" style="font-size: 25px;">NOMBRE DE LA MASCOTA:</label>
+            <input type="text" class="form-control" name= "nombreMascota" required>
+          </div>
+    
+          <div>
+            <label for="text" style="font-size: 25px;">RAZA PREDOMINANTE:</label>
+            <input type="text" class="form-control" name= "razaPredominante" required>
+          </div>
+    
+          <div>
+            <label for="text" style="font-size: 25px;">DESCRIPCION:</label>
+            <textarea name="descripcion" class="form-control" rows="8" cols="80"></textarea>
+          </div>
+    
+          <div>
+            <label for="text" style="font-size: 25px;">ESTADO ACTUAL:</label>
+            <select name="estado" class="btn btn-primary" name="estado" required>
+              <option value="RESCATADO">RESCATADO</option>
+              <option value="DISPONIBLE">DISPONIBLE</option>
+              <option value="ADOPTADO">ADOPTADO</option>
+            </select>
+          </div>
+    
+          <div>
+            <input type="submit" class="btn btn-primary" value="Crear registro">
+          </div>
+    
+      </form>
+    </div>
 
-      <div>
-        <label for="text">NOMBRE DE LA MASCOTA:</label>
-        <input type="text" name= "nombreMascota" required>
-      </div>
-
-      <div>
-        <label for="text">RAZA PREDOMINANTE:</label>
-        <input type="text" name= "razaPredominante" required>
-      </div>
-
-      <div>
-        <label for="text">DESCRIPCION:</label>
-        <textarea name="descripcion" rows="8" cols="80"></textarea>
-      </div>
-
-      <div>
-        <label for="text">ESTADO ACTUAL:</label>
-        <select name="estado" name="estado" required>
-          <option value="RESCATADO">RESCATADO</option>
-          <option value="DISPONIBLE">DISPONIBLE</option>
-          <option value="ADOPTADO">ADOPTADO</option>
-        </select>
-      </div>
-
-      <div>
-        <input type="submit" value="Crear registro">
-      </div>
-
-    </form>
   </body>
+  <div style=" padding-top: 40px;">
+      <footer > Mobile and web design - MIS PERRIS
+        <p> Free material for everyone </p>
+      </footer>
+    </div>
 </html>
