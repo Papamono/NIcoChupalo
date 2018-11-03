@@ -22,6 +22,10 @@ body{
 .listarr {
     width: 220px;
 }
+
+.menu{
+    padding-left: 10%;
+}
 .menu li{
     display: inline;
 }
@@ -42,7 +46,6 @@ body{
 
 .registross{
     display: inline;
-    float: left;
 }
 
 .ingresarr {
